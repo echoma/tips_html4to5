@@ -33,7 +33,7 @@
 
 ## 表单的大量改进
 
-##### 表单<form>可以仅作为逻辑控制标签
+##### 1. 表单<form>可以仅作为逻辑控制标签
 
 * H4:
 ```html
@@ -46,12 +46,11 @@
 * H5:
 ```html
     <!-- 控件可以脱离form -->
-    <form id=1>
+    <form id=1></form>
     <input form=1 type=text name=email/>
-    </form>
 ```
 
-##### 大量的控件改进
+##### 2. 大量的控件改进
 
 * 输入框&lt;input&gt;的type属性新增大量可取值;
 * 使用&lt;datalist&gt;配合&lt;input&gt;可以轻松实现combobox;
@@ -67,4 +66,4 @@
 * 与服务器实时通信： WebSocket在TCP上层封装了基于消息的通信机制
 * 桌面通知： NotificationAPI提供了向操作发送通知消息的能力
 * 画布： canvas和绘图API，拥有了flash的能力
-* 这些改进都会在[04_webapp.md](04_we.md)里讲述。
+* 这些改进都会在[04_webapp.md](04_webapp.md)里讲述。
