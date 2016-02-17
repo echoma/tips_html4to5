@@ -3,7 +3,7 @@
 ## 文档基本格式比html4精炼很多：
 
 * H4:
-```
+```html
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,7 +12,7 @@
 ```
 
 * H5:
-```
+```html
     <!doctype html>
     <html>
         <body></body>
@@ -21,7 +21,7 @@
 
 ## 标准规定：属性值可以不用引号
 
-```
+```html
 <span id=example></span>
 ```
 
@@ -36,7 +36,7 @@
 ##### 表单<form>可以仅作为逻辑控制标签
 
 * H4:
-```
+```html
     <!-- 所有空间必须在form标签内部，导致描述页面布局还要考虑控件和form的从属关系 -->
     <form>
     <input type=text name=email/>
@@ -44,7 +44,7 @@
 ```
 
 * H5:
-```
+```html
     <!-- 控件可以脱离form -->
     <form id=1>
     <input form=1 type=text name=email/>
@@ -53,16 +53,18 @@
 
 ##### 大量的控件改进
 
-* 输入框&lt;input&gt;的type属性新增大量可取值
-* 使用&lt;datalist&gt;配合&lt;input&gt;可以轻松实现combobox
+* 输入框&lt;input&gt;的type属性新增大量可取值;
+* 使用&lt;datalist&gt;配合&lt;input&gt;可以轻松实现combobox;
+* 全局tabindex控制tab顺序，和autofocus属性自动获取输入焦点;
+* required属性表示该属性必填;
+* 这些改进都会在[02_form.md](02_form.md)里讲述。
 
-##### 其他改进
+## 更加方便WebApp的开发
 
-* 全局tabindex控制tab顺序
-* required属性表示该属性必填
-
-<form>
-  <input placeholder=这里必填 required/>
-  <input placeholder=这里选填 />
-  <button>提交</button>
-</form>
+* 多媒体标签： audio和video标签嵌入音视频流
+* 地理位置API： 可调用设备的GPS进行定位
+* 本地存储：WebSQL提供了本地的key/value数据库
+* 与服务器实时通信： WebSocket在TCP上层封装了基于消息的通信机制
+* 桌面通知： NotificationAPI提供了向操作发送通知消息的能力
+* 画布： canvas和绘图API，拥有了flash的能力
+* 这些改进都会在[04_webapp.md](04_we.md)里讲述。
