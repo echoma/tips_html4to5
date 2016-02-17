@@ -13,9 +13,10 @@
 
 | 文件 | 内容简介 |
 | ------ | ------ |
-| [01_syntax.html](01_syntax.html)  | html5的基本语法的变化 |
+| [01_key_diff.md](01_key_diff.md)  | html5的主要不同点 |
 | [02_form.html](02_form.html)  | 表单里的常见元素都有着巨大改进，做表单不要太轻松(input/textarea/button/combobox) |
-| [03_for_webapp.html](04_for_webapp.html) | 更好的对webapp开发的支持：弹性布局，WebSocket、Notificatiion API、Context Menu、绘图API、多媒体API |
+| [03_flex_layout.html](04_flex_layout.html) | 弹性布局 |
+| [04_webapp.html](05_webapp.html) | WebSocket、通知API、上下文菜单、绘图API、多媒体API、离线存储、拖拽、可编辑内容 |
 | [04_css_selector.html](04_css_selector.html) | css选择器，jquery选择器的内置版本 |
 | [05_css_effect.html](05_css_effect.html) | css效果、font-icon、动画 |
 | [06_less_sass.html](06_less_sass.html) | 可以编程的css：less和sass |
