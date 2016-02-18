@@ -1,4 +1,4 @@
-# HTML5的主要变化
+# HTML5/CSS3的主要变化
 
 ## 文档基本格式比html4精炼很多：
 
@@ -25,38 +25,32 @@
 <span id=example></span>
 ```
 
-## 大量的新元素
+## HTML更加纯粹
 
-* 例如： article, aside, audio, bdi, canvas, command, data, datalist, details, embed, figcaption, figure, footer, header, keygen, mark, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, track, video, wbr
+* HTML仅用来描述文档的语义结构，不在描述表现，表现由CSS负责
+* 之前用来描述表现的元素已经不推荐使用，例如: `<b>`表示加粗, `<font>`表示使用字体。这些表现层面的东西要使用CSS来描述。
+* 不要再使用`<table>`来控制布局了，它纯粹就是表示表格而已。CSS3还新增了弹性布局方案。
+* 新增大量元素用来表示文档的语意结构： article, aside, audio, bdi, canvas, command, data, datalist, details, embed, figcaption, figure, footer, header, keygen, mark, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, track, video, wbr
 * 使用新元素对页面内容进行语义描述，方便对搜索引擎的优化
-* 不少新元素也对网页的功能做了扩展，如audio, video
+* 不少新元素也对网页的功能做了扩展，例如多媒体支持：`<audio>`, `<video>`；绘图支持: `<canvas>`
+
+## CSS更多新特性
+
+* 选择器。jquery选择器的大部分功能其实可以用原生的css选择器来实现了。
+* 更多的样式。像圆角、渐变色、投影都可以使用原生css来做了，不在需要图片了。
+* 可针对多种屏幕尺寸编写样式，催生了响应式页面，一个页面可以同时适应桌面、手机、平板多种尺寸。
+* 变形和动画支持。直接在css里定义动画，比原来js做动画的方式更方便，性能也更高。
 
 ## 表单的大量改进
 
-##### 1. 表单<form>可以仅作为逻辑控制标签
-
-* H4:
-```html
-    <!-- 所有空间必须在form标签内部，导致描述页面布局还要考虑控件和form的从属关系 -->
-    <form>
-    <input type=text name=email/>
-    </form>
-```
-
-* H5:
-```html
-    <!-- 控件可以脱离form -->
-    <form id=1></form>
-    <input form=1 type=text name=email/>
-```
-
-##### 2. 大量的控件改进
-
-* 输入框&lt;input&gt;的type属性新增大量可取值;
-* 使用&lt;datalist&gt;配合&lt;input&gt;可以轻松实现combobox;
+* 表单内部的控件可以位于`<form>`标签的外部，不再受文档结构的局限
+* 全局tabindex和autofocus轻松控制输入焦点
+* 输入框`<input>`的type属性新增大量可取值;
+* 使用`<datalist>`配合`<input>`可以轻松实现combobox;
 * 全局tabindex控制tab顺序，和autofocus属性自动获取输入焦点;
-* required属性表示该属性必填;
-* 这些改进都会在[02_form.md](02_form.md)里讲述。
+* required属性表示该属性必填。
+
+这些改进都会在[02_form.md](02_form.md)里讲述。
 
 ## 更加方便WebApp的开发
 
@@ -66,4 +60,5 @@
 * 与服务器实时通信： WebSocket在TCP上层封装了基于消息的通信机制
 * 桌面通知： NotificationAPI提供了向操作发送通知消息的能力
 * 画布： canvas和绘图API，拥有了flash的能力
-* 这些改进都会在[04_webapp.md](04_webapp.md)里讲述。
+
+这些改进都会在[04_webapp.md](04_webapp.md)里讲述。
