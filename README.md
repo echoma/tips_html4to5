@@ -13,7 +13,7 @@
 
 | 文件 | 内容简介 |
 | ------ | ------ |
-| [01_key_diff.md](01_key_diff.md)  | html5的主要不同点 |
+| [01_key_diff.md](01_key_diff.md)  | html5/css3的主要不同点 |
 | [02_form.md](02_form.md)  | 表单里的常见元素都有着巨大改进，做表单不要太轻松(input/textarea/button/combobox) |
 | [03_flex_layout.html](03_flex_layout.html) | 弹性布局 |
 | [04_webapp.html](04_webapp.html) | WebSocket、通知API、上下文菜单、绘图API、多媒体API、离线存储、拖拽、可编辑内容 |
