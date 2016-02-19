@@ -15,7 +15,7 @@
 | ------ | ------ |
 | [01_key_diff.md](01_key_diff.md)  | html5/css3的主要不同点 |
 | [02_form.md](02_form.md)  | 表单的巨大改进 |
-| [03_flex_layout.html](03_flex_layout.html) | 弹性布局 |
+| [03_flex_layout.md](03_flex_layout.md) | 弹性布局 |
 | [04_webapp.html](04_webapp.html) | WebSocket、通知API、上下文菜单、绘图API、多媒体API、离线存储、拖拽、可编辑内容 |
 | [05_css_selector.html](05_css_selector.html) | css选择器，jquery选择器的内置版本 |
 | [06_css_effect.html](06_css_effect.html) | css效果、font-icon、动画 |
