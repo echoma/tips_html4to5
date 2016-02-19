@@ -25,6 +25,15 @@
 <span id=example></span>
 ```
 
+## 标准规定：void元素可以不使用`/`闭合
+
+* void元素包括：     area, base, br, col, embed, hr, img, input, keygen, link, menuitem, meta, param, source, track, wbr 
+* 以下两种写法是等效的：
+```html
+<input value=abc>
+<input value=abc />
+```
+
 ## HTML更加纯粹
 
 * HTML仅用来描述文档的语义结构，不在描述表现，表现由CSS负责

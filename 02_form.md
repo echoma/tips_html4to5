@@ -52,10 +52,10 @@
 
 ```html
 	<form>
-	<input type=email/> <!-- 邮箱 -->
-    <input type=number/> <!-- 数字 -->
-    <input type=url/> <!-- 链接 -->
-    <input type=submit value=提交 />
+        <input type=email/> <!-- 邮箱 -->
+        <input type=number/> <!-- 数字 -->
+        <input type=url/> <!-- 链接 -->
+        <button>提交</button>
     </form>
 ```
 
@@ -71,7 +71,7 @@
     </form>
 ```
 
-* placeholder属性：该输入框未填写时的提示语
+* placeholder属性：输入框占位符
 
 ```html
 	<input type=email placeholder="Input Your Email" />
@@ -128,12 +128,19 @@
     </form>
 ```
 
+* accept属性：配合file类型输入框实现过滤可选的文件类型
+
+```html
+	<input type=file accept=".docx" />
+    <input type=file accept="image/*" />
+```
+
 * 更多内容可以参考[这个页面](https://developer.mozilla.org/en/docs/Web/HTML/Element/Input)
 
 ## 按钮`<button>`
 
 * 不同于`<input>`的button类型，`<button>`作为一种常规html元素，可以内嵌各种html和使用各种样式。
-* 也可以有`type`属性： submit, reset, button，分表表示提交表单、重置表单、普通按钮
+* 也可以有`type`属性： submit, reset, button，分表表示提交表单、重置表单、普通按钮。默认是submit。
 * 也可以有autofocus和form属性
 
 ```css
@@ -143,4 +150,34 @@
 ```html
 <button>无样式</button>
 <button class=sample>有样式</button>
+```
+
+## 选单`<select>`
+
+* multi属性：支持多选
+
+```html
+    <select multiple id="sample">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+```
+
+```javascript
+	var sel = document.getElementById('sample');
+    for(var i=0; i<sel.options.length; ++i)
+    	console.log(x.options[i].value);
+```
+
+* size属性：选单显示为滚动列表（类似多选选单）并指定默认显示多少行
+
+```html
+    <select size=2>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
 ```
