@@ -26,8 +26,6 @@
 
 ## 如何简单描述一个弹性容器
 
-* 概念较多
-
 ##### 容器的基本定义
 
 * 这个元素作为一个容器，其内部的元素使用弹性布局。
@@ -60,10 +58,46 @@
 
 ##### 容器内部的弹性元素的尺寸计算规则
 
-* 元素将如果增大自己的尺寸
+* 元素将如何增大自己的尺寸
   + `flex-grow: <number>; /* default 0 */`
   + ![增大尺寸](./assert/03/flex_grow.jpg)
 
-##
-* ：该元素作为一个容器，其内部的元素使用弹性布局
-* 
+* 元素将如何压缩自己的尺寸
+  + `flex-shrink: <number>; /* default 0 */`
+
+* 元素的初始尺寸
+  + `flex-basis: <length> | auto; /* default auto */`
+
+* 组合：
+  + `flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]`
+
+## 参考文章
+
+* 英文 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+* 中文 http://www.w3cplus.com/css3/a-guide-to-flexbox.html
+
+## 实际例子
+
+![微信截图](./assert/03/weixin_snap.jpg)
+
+##### 整体结构
+
+上中下三块
+
+```html
+<div class="main">
+  <div class="top">顶部导航</div>
+  <div class="cet">聊天内容</div>
+  <div class="bot">底部输入框</div>
+</div>
+```
+
+```css
+*{font-size:14px; color:white; }
+html, body{height:100%; margin: 0px; }
+
+.main{height:100%; display:flex; flex-direction: column; background:lightgray; }
+.top{height:30px; background:black;padding: 5px; }
+.bot{height:50px; background:black;padding: 5px; }
+.cet{flex:1;font-size:12px; color:black; padding: 5px; }
+```
