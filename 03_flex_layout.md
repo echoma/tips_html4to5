@@ -80,9 +80,11 @@
 
 ![微信截图](./assert/03/weixin_snap.jpg)
 
+[codepen的代码地址](http://codepen.io/anon/pen/gPVjmg)
+
 ##### 整体结构
 
-上中下三块
+* 整体分为上中下三块
 
 ```html
 <div class="main">
@@ -99,5 +101,69 @@ html, body{height:100%; margin: 0px; }
 .main{height:100%; display:flex; flex-direction: column; background:lightgray; }
 .top{height:30px; background:black;padding: 5px; }
 .bot{height:50px; background:black;padding: 5px; }
+.cet{flex:1;font-size:12px; color:black; padding: 5px; }
+```
+
+* 顶部导航部分分为左中右三块（回退、人名、菜单），因此内容变为
+
+```html
+<div class="main">
+  <div class="top">
+    <div class="lef">&lt;微信</div>
+    <div class="cet">圆圆</div>
+    <div class="rig">人头</div>
+  </div>
+  <div class="cet">聊天内容</div>
+  <div class="bot">底部输入框</div>
+</div>
+```
+
+```css
+*{font-size:14px; color:white; }
+html, body{height:100%; margin: 0px; }
+
+.main{height:100%; display:flex; flex-direction: column; background:lightgray; }
+.top{height:30px; background:black;padding: 5px; display:flex;flex-direction: row;}
+.top .lef{width:50px; margin:5px;}
+.top .rig{width:50px; margin:5px;}
+.top .cet{flex:1; font-size:18px; color:white;text-align:center;}
+.bot{height:50px; background:black;padding: 5px; }
+.cet{flex:1;font-size:12px; color:black; padding: 5px; }
+```
+
+* 底部输入框也是左中右三部分（语音输入按钮、文字输入框、两个按钮），因此内容变为：
+
+```html
+<div class="main">
+  <div class="top">
+    <div class="lef">&lt;微信</div>
+    <div class="cet">圆圆</div>
+    <div class="rig">人头</div>
+  </div>
+  <div class="cet">聊天内容</div>
+  <div class="bot">
+    <button class="lef">0</button>
+    <input class="cet" type="text">
+    <button class="rig">1</button>
+    <button class="rig">2</button>
+  </div>
+</div>
+```
+
+```css
+*{font-size:14px; color:white; }
+html, body{height:100%; margin: 0px; }
+
+.main{height:100%; display:flex; flex-direction: column; background:#999; }
+
+.top{height:30px; background:black;padding: 5px; display:flex;flex-direction: row;}
+.top .lef{width:50px; margin:5px;}
+.top .rig{width:50px; margin:5px;}
+.top .cet{flex:1; font-size:18px; color:white;text-align:center;}
+
+.bot{height:30px; background:lightgray; padding: 5px; display:flex;flex-direction: row;}
+.bot button{width:25px; height:25px; margin:5px;border-color:black; border-radius:10px;color:black;}
+.bot .cet{flex:1; font-size:18px; color:white;text-align:center;border-radius:5px;}
+
 .cet{flex:1;font-size:12px; color:black; padding: 5px; }
 ```
