@@ -167,3 +167,54 @@ html, body{height:100%; margin: 0px; }
 
 .cet{flex:1;font-size:12px; color:black; padding: 5px; }
 ```
+
+* 中间消息列表其实就是一个主轴方向为`纵向`的弹性布局，即`flex-direction:column`
+* 每一条消息其实就是分为两部分，一个头像，一个消息内容。自己发的是头像在左，对方法的头像在右，这正好用`flex-direction:row-reverse`来实现
+
+```html
+<div class="main">
+  <div class="top">
+    <div class="lef">&lt;微信</div>
+    <div class="center">圆圆</div>
+    <div class="rig">人头</div>
+  </div>
+  <div class="cet">
+    <div class="msg send">
+      <div class="avata"></div>
+      <div class="content">放假一起去旅游吧</div>
+    </div>
+    <div class="msg recv">
+      <div class="avata"></div>
+      <div class="content">好啊期待很久了</div>
+    </div>
+  </div>
+  <div class="bot">
+    <button class="lef">0</button>
+    <input class="center" type="text">
+    <button class="rig">1</button>
+    <button class="rig">2</button>
+  </div>
+</div>
+```
+
+```css
+*{font-size:14px; color:white; }
+html, body{height:100%; margin: 0px; }
+
+.main{height:100%; display:flex; flex-direction: column; background:#999; }
+
+.top{height:30px; background:black;padding: 5px; display:flex;flex-direction: row;}
+.top .lef{width:50px; margin:5px;}
+.top .rig{width:50px; margin:5px;}
+.top .center{flex:1; font-size:18px; color:white; text-align:center;}
+
+.bot{height:30px; background:lightgray; padding: 5px; display:flex;flex-direction: row;}
+.bot button{width:25px; height:25px; margin:5px;border-color:black; border-radius:10px;color:black;}
+.bot .center{flex:1; font-size:18px; color:white;text-align:center;border-radius:5px;}
+
+.cet {flex:1;font-size:12px; color:black; padding: 5px; display:flex; flex-direction:column; overflow-y:scroll;}
+.cet .msg{display:flex; margin:10px; align-items: flex-start}
+.cet .msg .avata {border:1px solid gray; width:60px; height:60px; background-color: white;}
+.cet .msg .content {border:1px solid gray; margin:0 10px; padding: 10px; background-color: lightgray; color:black; }
+.cet .recv {flex-direction:row-reverse;}
+```
