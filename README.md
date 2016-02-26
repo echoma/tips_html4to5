@@ -1,10 +1,12 @@
 ## 适合读者
 
-这些内容均是结合我自己的使用经验，列举了如何使用html5来更好更快的构建网页。因此内容主要是面向有一定HTML4基础，想要切换到HTML5/CSS3的同学。不太适合“想要把html5/css3玩出花来的同学”。
+我本人是后台开发，做后台需要做些小工具或者简单的后台管理，所以常会用到网页来开发东西。对于类似于我这种非专业前台开发人员来说，HTML5/CSS3大大降低了门槛，提升了开发效率。
+
+这里的内容均是结合我自己的学习过程和使用经验，列举了如何使用html5/css3来更好更快的构建网页。因此内容主要是面向有一定HTML4基础，想要借助HTML5/CSS3强大力量的同学。
 
 ## HTML5/CSS3的优势
 
-* 新标准有更加统一的实现。微软无法在借助垄断地位制定自己的一套标准。
+* 新标准有更加统一的实现。比如微软无法在借助垄断地位制定自己的一套标准。
 * 许多新特性大大简化了开发。之前在html4里经常要写代码或使用第三方库完成的功能都内置了。
 * 更加适合桌面app和移动端app。弹性布局、多媒体支持、响应式界面等。
 * 能更加直接的表达界面、数据。很多针对表单结构、搜索引擎的更好支持。
@@ -16,10 +18,9 @@
 | [01_key_diff.md](01_key_diff.md)  | html5/css3的主要不同点 |
 | [02_form.md](02_form.md)  | 表单的巨大改进 |
 | [03_flex_layout.md](03_flex_layout.md) | 弹性布局 |
-| [04_webapp.html](04_webapp.html) | WebSocket、通知API、上下文菜单、绘图API、多媒体API、离线存储、拖拽、可编辑内容 |
-| [05_css_selector.html](05_css_selector.html) | css选择器，jquery选择器的内置版本 |
-| [06_css_effect.html](06_css_effect.html) | css效果、font-icon、动画 |
-| [07_less_sass.html](07_less_sass.html) | 可以编程的css：less和sass |
+| [04_css.html](04_css.md) | css3的大量改进(选择器、圆角、投影、动画) |
+| [05_css_tools.html](05_css_tools.md) | 两个有用的工具：face-icon，less和sass |
+| [06_webapp.html](06_webapp.html) | WebSocket、通知API、上下文菜单、绘图API、多媒体API、离线存储、拖拽、可编辑内容 |
 
 ## 其他
 * 所有代码都可以到这个网站上测试运行： [codepen](http://codepen.io/pen/)
