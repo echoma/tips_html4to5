@@ -42,6 +42,8 @@
 
 * 在js脚本里使用DomElement.querySelector()，可以动态的运行选择器。可以作为jquery选择器的一种本地替代方案。
 
+## 颜色支持透明度
+
 ## 新增的实用视觉样式
 
 * 圆角边框 `border-radius: length|percentage`
@@ -54,7 +56,7 @@
     </div>
 ```
 
-* 文字修饰 `text-shadow: offset-x offset-y blur-radius color`
+* 文字投影 `text-shadow: offset-x offset-y blur-radius color`
 
 ```html
     <p>Sed ut perspiciatis unde omnis iste natus</p>
@@ -64,6 +66,14 @@
     <p style="text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;">
        Sed ut perspiciatis unde omnis iste natus
     </p>
+```
+
+* 盒字投影 `box-shadow: offset-x | offset-y | blur-radius | color`
+
+```html
+    <div style="box-shadow: 10px 10px 5px gray; width:100px; height:100px; border: 1px solid black;">
+    Sed ut perspiciatis unde omnis iste natus
+    </div>
 ```
 
 * 背景渐变 `background-image: linear-gradient(to bottom, blue, pink);`
