@@ -44,6 +44,19 @@
 
 ## 颜色支持透明度
 
+所有指定颜色的地方都可以指定透明度了
+
+```html
+<div class="a"></div>
+<div class="b"></div>
+```
+
+```css
+div {width:100px;height:100px;}
+div.a { background: rgba(200,54,54,0.5); }
+div.b { background: rgba(54,54,200,0.5); position:absolute; left:50px; top:50px; }
+```
+
 ## 新增的实用视觉样式
 
 * 圆角边框 `border-radius: length|percentage`
@@ -68,7 +81,7 @@
     </p>
 ```
 
-* 盒字投影 `box-shadow: offset-x | offset-y | blur-radius | color`
+* 盒子投影 `box-shadow: offset-x | offset-y | blur-radius | color`
 
 ```html
     <div style="box-shadow: 10px 10px 5px gray; width:100px; height:100px; border: 1px solid black;">
@@ -82,4 +95,34 @@
 	<div style="width:100px;height:100px;background-image: linear-gradient(to bottom, blue, pink);">
     	Sed ut perspiciatis unde omnis iste natus
     </div>
+    <div style="background: repeating-radial-gradient(#b8e7bf, #b8e7bf 5px, white 5px, white 10px); width:100px; height:100px;">
+    	Sed ut perspiciatis unde omnis iste natus
+    </div>
 ```
+
+* 透明颜色和这些使用的视觉样式相配合，可以省掉大量的图片，大大提高页面的加载速度
+
+## 属性取值可动态计算
+
+* 新增calc()函数，动态计算属性的取值，省略了大量的脚本
+
+```html
+<div class="banner">This is a banner!</div>
+```
+
+```css
+.banner {
+  position: absolute;
+  left: 5%;                 /* fallback for browsers without support for calc() */
+  left: 40px;
+  width: 90%;               /* fallback for browsers without support for calc() */
+  width: calc(100% - 80px);
+  border: solid black 1px;
+  box-shadow: 1px 2px;
+  background-color: yellow;
+  padding: 6px;
+  text-align: center;
+}
+```
+
+## 变形和动画

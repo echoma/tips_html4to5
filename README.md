@@ -17,8 +17,8 @@
 | ------ | ------ |
 | [01_key_diff.md](01_key_diff.md)  | html5/css3的主要不同点 |
 | [02_form.md](02_form.md)  | 表单的巨大改进 |
-| [03_css.html](03_css.md) | css3的大量改进 |
-| [04_layout.md](04_layout.md) | 多列布局和弹性布局 |
+| [03_css.md](03_css.md) | css3的大量改进 |
+| [04_layout.md](04_layout.md) | 弹性布局、多列布局 |
 | [05_css_tools.html](05_css_tools.md) | 两个有用的工具：face-icon，less和sass |
 | [06_webapp.html](06_webapp.html) | WebSocket、通知API、上下文菜单、绘图API、多媒体API、离线存储、拖拽、可编辑内容 |
 
