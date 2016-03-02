@@ -40,7 +40,7 @@
 
 * 完整的选择器列表：http://www.w3school.com.cn/cssref/css_selectors.ASP
 
-* 在js脚本里使用DomElement.querySelector()，可以动态的运行选择器。可以作为jquery选择器的一种本地替代方案。
+* 在js脚本里使用`DomElement.querySelector()`，可以动态的运行选择器。可以作为jquery选择器的一种本地替代方案。
 
 ## 颜色支持透明度
 
@@ -125,4 +125,74 @@ div.b { background: rgba(54,54,200,0.5); position:absolute; left:50px; top:50px;
 }
 ```
 
-## 变形和动画
+## 变形
+
+* 这是个新的CSS属性，可以用来修改元素在空间里的表现。
+
+##### 变形--旋转
+
+```html
+<input style="transform:rotate(-20deg)" value="输入框旋转">
+```
+
+##### 变形--扭曲
+
+```html
+<input style="transform:skew(-20deg)" value="输入框扭曲">
+```
+
+##### 变形--缩放
+
+```html
+<input style="transform:scale(0.5, 0.8)" value="输入框缩放">
+```
+
+##### 变形--平移
+```html
+<input style="transform:translate(50%, 50px)" value="输入框位移">
+```
+
+##### 变形--矩阵
+
+上面提到的四种变形都可以通过矩阵来完成。下面例子里的矩阵完成了X轴放大3倍的变形。
+
+```html
+<input style="transform:matrix(3.0, 0.0, 0.0, 1.0, 0.0, 0.0)" value="输入框矩阵">
+```
+
+##### 变形--三维变形
+
+上面的几种变形都有对应的3D版本。
+
+## 过渡
+
+* 在CSS3之前，CSS产生的效果都是立刻呈现的。“过渡”这个概念的引入，为CSS增加了时间轴。
+* 过渡是一个新的CSS属性(`trasition`)，它通过设定元素其他CSS属性发生变化的时间轴来实现动画效果。
+* `trasition: property duration timeing-function delay`
+* 大多数CSS属性（包括变形属性）都是可以使用过度来实现动画效果的，这里有完整的[可过度的属性列表](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)。
+
+```html
+<body>
+    <p>当鼠标移到下面的方框内时开始过度动画，包含了以下属性的变化：宽、高、背景色、变形。</p>
+    <div class="box">123</div>
+</body>
+```
+
+```css
+.box {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #00FFFF;
+    transition: width 2s, height 2s, background-color 2s, transform 2s ease-in-out;
+}
+
+.box:hover {
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    transform: rotate(180deg);
+}
+```

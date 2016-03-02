@@ -11,7 +11,7 @@
 
 传统布局方案的问题是： **太他妈难调了！**
 
-![css2就是一坨shit](./assert/03/css_shit.gif)
+![css2就是一坨shit](./assert/04/css_shit.gif)
 
 ## 弹性布局的优点
 
@@ -29,35 +29,35 @@
   + `display: flex;`
 
 * 主轴方向：容器内部的元素按照水平（从左到右 或 从右到左）或垂直方向（从上到下 或 从下到上）排列。
-  + ![主轴方向](./assert/03/flex_direction.jpg)
+  + ![主轴方向](./assert/04/flex_direction.jpg)
   + `flex-direction: row | row-reverse | column | column-reverse`
   + 容器主轴的头和尾
   + 容器侧轴的头和尾
-  + ![头尾](./assert/03/flex_start_end.jpg)
+  + ![头尾](./assert/04/flex_start_end.jpg)
 
 ##### 容器内部的固定大小元素的排列规则
 
 * 如果容器在主轴排满了，是否可以换行。
-  + ![换行](./assert/03/flex_wrap.jpg)
+  + ![换行](./assert/04/flex_wrap.jpg)
   + `flex-wrap: nowrap | wrap | wrap-reverse`
 
 * 主轴对齐：容器内部的元素在主轴方向上的对齐方式是怎样的。（头对齐、尾对齐、居中、散列、顶头散列）
   + `justify-content: flex-start | flex-end | center | space-between | space-around;`
-  + ![主轴对齐](./assert/03/justify_content.jpg)
+  + ![主轴对齐](./assert/04/justify_content.jpg)
 
 * 侧轴对齐：
   + `align-items: flex-start | flex-end | center | baseline | stretch;`
-  + ![侧轴对齐](./assert/03/align_items.jpg)
+  + ![侧轴对齐](./assert/04/align_items.jpg)
 
 * 如果有换行，测轴方向剩余空间的使用规则
   + `align-content: flex-start | flex-end | center | space-between | space-around | stretch;`
-  + ![换行侧轴空白](./assert/03/align_content.jpg)
+  + ![换行侧轴空白](./assert/04/align_content.jpg)
 
 ##### 容器内部的弹性元素的尺寸计算规则
 
 * 元素将如何增大自己的尺寸
   + `flex-grow: <number>; /* default 0 */`
-  + ![增大尺寸](./assert/03/flex_grow.jpg)
+  + ![增大尺寸](./assert/04/flex_grow.jpg)
 
 * 元素将如何压缩自己的尺寸
   + `flex-shrink: <number>; /* default 0 */`
@@ -75,7 +75,7 @@
 
 ## 实际例子
 
-![微信截图](./assert/03/weixin_snap.jpg)
+![微信截图](./assert/04/weixin_snap.jpg)
 
 [codepen的代码地址](http://codepen.io/anon/pen/gPVjmg)
 
