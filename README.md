@@ -19,8 +19,9 @@
 | [02_form.md](02_form.md)  | 表单的巨大改进 |
 | [03_css.md](03_css.md) | css3的大量改进 |
 | [04_layout.md](04_layout.md) | 弹性布局、多列布局 |
-| [05_css_tools.md](05_css_tools.md) | FaceFont和SASS |
-| [06_webapp.html](06_webapp.html) | WebSocket、通知API、上下文菜单、绘图API、多媒体API、离线存储、拖拽、可编辑内容 |
+| [05_css_tools.md](05_css_tools.md) | CSS实用工具：FaceFont和SASS |
+| [06_webapp.md](06_webapp.md) | WebApp开发：通知API、WebSocket、上下文菜单、拖拽、可编辑内容 |
+| [07_webapp2.md](07_webapp2.md) | WebApp开发2：绘图API、多媒体API、离线存储、可编辑内容 |
 
 ## 其他
 * 所有代码都可以到这个网站上测试运行： [codepen](http://codepen.io/pen/)
